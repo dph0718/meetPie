@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* .App-logo, #colorPanel, #lightBulb {
+    animation: App-logo-spin infinite 20s linear;
+  }
+   table {
+    animation: lightBulb-spin infinite 20s linear;
+  } */
+
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lightBulb-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes lightBulb-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+form p {
+  font-size: 12px;
+
+}
+#blinky { 
+  border-radius: 100%;
+  --widthVar: 100px;
+  /* border: 4px red solid; */
+  /* background-color: lime; */
+  /* box-shadow: 0px 0px 10px 2px red; */
+  filter: drop-shadow(30px 90px 100px 200px red);
+  width: var(--widthVar);
+  height:  var(--widthVar);
+  transition: all 1s;
+  position: relative;
+}
+
+/* #twinkle {
+  position: absolute;
+  left: 50px;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(94, 94, 148, 0.4);
+  border-radius: 100%;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0%;
+  border: white 20px solid;
+
+  transition: all 1s;
+
+} */
+
+.red {
+  box-shadow: -1px 0px 10px 2px red;
+  background-color: rgb(172, 29, 29);
+}
+
+.green {
+  box-shadow: 1px 0px 20px 2px lime;
+  background-color: rgb(32, 161, 32);
+}
+
+.blue {
+  box-shadow: 1px 0px 20px 2px rgb(0, 149, 255);
+  background-color: rgb(40, 23, 224);
+}
+
+.yellow {
+  box-shadow: 1px 0px 20px 2px rgb(242, 255, 0);
+  background-color: rgb(216, 203, 21);
+}
+
+/* #twinkle.green {
+  border-color: rgb(178, 248, 178);
+}
+#twinkle.red {
+  border-color: rgb(255, 212, 212);
+} */

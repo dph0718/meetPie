@@ -1,0 +1,48 @@
+#blinky { 
+    border-radius: 100%;
+    --widthVar: 100px;
+    /* border: 4px red solid; */
+    /* background-color: lime; */
+    /* box-shadow: 0px 0px 10px 2px red; */
+    filter: drop-shadow(30px 90px 100px 200px red);
+    width: var(--widthVar);
+    height:  var(--widthVar);
+    transition: all 1s;
+    position: relative;
+}
+
+#twinkle {
+    position: relative;
+    left: 50px;
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(94, 94, 148, 0.4);
+    border-radius: 100%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 100%;
+    transform: rotate(180deg);
+    border: white 20px solid;
+    /* border-left: none ;  */
+    /* border-bottom:none;  */
+    transition: all 1s;
+
+}
+
+.red {
+    box-shadow: -1px 0px 10px 2px red;
+    background-color: rgb(172, 29, 29);
+}
+
+.green {
+    box-shadow: 1px 0px 20px 2px lime;
+    background-color: rgb(32, 161, 32);
+}
+
+#twinkle.green {
+    border-color: rgb(178, 248, 178);
+}
+#twinkle.red {
+    border-color: rgb(255, 212, 212);
+}
