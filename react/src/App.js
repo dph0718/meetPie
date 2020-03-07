@@ -13,6 +13,7 @@ import UserProfile from './UserProfile'
 import FriendTableInvite from './FriendTableInvite'
 import FriendTableEvent from './FriendTableEvent'
 import EventResultsModal from './EventResultsModal'
+import EventPreview from './EventPreview.js'
 
 
 class App extends React.Component {
@@ -38,6 +39,8 @@ class App extends React.Component {
               <br />
               <Link to="/create-event">Create Event</Link>
               <br />
+              <Link to="/event-preview">Preview Event Preview</Link>
+              <br />
               <Link to="/preview-friend-table-invite">Preview Friend Table (Invite)</Link>
               <br />
               <Link to="/preview-friend-table-event">Preview Friend Table (Event Preview)</Link>
@@ -46,6 +49,12 @@ class App extends React.Component {
             </nav>
 
             <Switch>
+              <Route path="/event-preview">
+                <h2>
+                  Event Preview
+                  </h2>
+                <EventPreview />
+              </Route>
               <Route path="/preview-event-results">
                 <h2>
                   Event Results
