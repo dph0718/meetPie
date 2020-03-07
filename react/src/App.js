@@ -10,6 +10,9 @@ import {
 import CreateEvent from './CreateEvent'
 import MyEvents from './MyEvents'
 import UserProfile from './UserProfile'
+import FriendTableInvite from './FriendTableInvite'
+import FriendTableEvent from './FriendTableEvent'
+import EventResultsModal from './EventResultsModal'
 
 
 class App extends React.Component {
@@ -24,19 +27,43 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        {/* <header className="App-header">Header</header> */}
         <Router>
           <div>
             <nav>
-              <Link to="/">Home</Link>
+              <Link to="/">HomeHome</Link>
+              <br />
               <Link to="/profile-edit">Profile</Link>
+              <br />
               <Link to="/my-events">My Events</Link>
+              <br />
               <Link to="/create-event">Create Event</Link>
+              <br />
+              <Link to="/preview-friend-table-invite">Preview Friend Table (Invite)</Link>
+              <br />
+              <Link to="/preview-friend-table-event">Preview Friend Table (Event Preview)</Link>
+              <br />
+              <Link to="/preview-event-results">Preview Event Results Modal)</Link>
             </nav>
 
-            {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
             <Switch>
+              <Route path="/preview-event-results">
+                <h2>
+                  Event Results
+                  </h2>
+                <EventResultsModal />
+              </Route>
+              <Route path="/preview-friend-table-event">
+                <h2>
+                  Table event
+                  </h2>
+                <FriendTableEvent />
+              </Route>
+              <Route path="/preview-friend-table-invite">
+                <h2>
+                  Table invite
+                  </h2>
+                <FriendTableInvite />
+              </Route>
               <Route path="/profile-edit">
                 <UserProfile />
               </Route>
