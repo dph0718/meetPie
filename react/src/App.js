@@ -12,6 +12,7 @@ import MyEvents from './MyEvents'
 import UserProfile from './UserProfile'
 import FriendTableInvite from './FriendTableInvite'
 import FriendTableEvent from './FriendTableEvent'
+import EventResultsModal from './EventResultsModal'
 
 
 class App extends React.Component {
@@ -30,25 +31,37 @@ class App extends React.Component {
           <div>
             <nav>
               <Link to="/">HomeHome</Link>
-              <br/>
+              <br />
               <Link to="/profile-edit">Profile</Link>
-              <br/>
+              <br />
               <Link to="/my-events">My Events</Link>
-              <br/>
+              <br />
               <Link to="/create-event">Create Event</Link>
-              <br/>
-              <Link to ="/preview-friend-table-invite">Preview Friend Table (Invite)</Link>
-              <br/>
-              <Link to ="/preview-friend-table-event">Preview Friend Table (Event Preview)</Link>
+              <br />
+              <Link to="/preview-friend-table-invite">Preview Friend Table (Invite)</Link>
+              <br />
+              <Link to="/preview-friend-table-event">Preview Friend Table (Event Preview)</Link>
+              <br />
+              <Link to="/preview-event-results">Preview Event Results Modal)</Link>
             </nav>
 
             <Switch>
+              <Route path="/preview-event-results">
+                <h2>
+                  Event Results
+                  </h2>
+                <EventResultsModal />
+              </Route>
               <Route path="/preview-friend-table-event">
-                Table event
+                <h2>
+                  Table event
+                  </h2>
                 <FriendTableEvent />
               </Route>
               <Route path="/preview-friend-table-invite">
-                Table invite
+                <h2>
+                  Table invite
+                  </h2>
                 <FriendTableInvite />
               </Route>
               <Route path="/profile-edit">
