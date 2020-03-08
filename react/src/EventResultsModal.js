@@ -1,5 +1,5 @@
 import React from "react";
-
+import modal from "./HOCModal"
 
 
 function ResultButton(props) {
@@ -70,4 +70,4 @@ class EventResultsModal extends React.Component {
     };
 };
 
-export default EventResultsModal;
+export default modal(EventResultsModal);
