@@ -1,5 +1,5 @@
 import React from 'react';
-
+import FriendTableEvent from './FriendTableEvent'
 
 class CreateEvent extends React.Component {
     constructor(props) {
@@ -21,8 +21,9 @@ class CreateEvent extends React.Component {
             <>
                 <h2>CreateEvent</h2>
                 <form>
-                    <label>Invite Somebody</label>
+                    <button>Invite Somebody</button>
                     <p>This should open a modal that displays friends in a table that can be sorted.</p>
+                    <FriendTableEvent />
                     <button onClick={this.submitHandler}>Map it out.</button>
 
                 </form>
