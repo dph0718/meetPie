@@ -1,6 +1,6 @@
 import React from "react";
 
-
+import modal from "./HOCModal"
 
 function ResultButton(props) {
     let icon = "🤐"
@@ -9,7 +9,7 @@ function ResultButton(props) {
             icon = "🍴"
             break;
         case "casino":
-            icon = "🎲"
+            icon = "🎰"
             break;
         case "bar":
             icon = "🍸"
@@ -31,6 +31,7 @@ function ResultButton(props) {
         </div>
     )
 }
+
 
 class EventResultsModal extends React.Component {
     constructor(props) {
@@ -56,18 +57,15 @@ class EventResultsModal extends React.Component {
 
 
     render() {
+
         return (
 
             <div>
-                {this.state.results.map(result=><ResultButton type={result} />)}
+                {this.state.results.map(result => <ResultButton type={result} />)}
+                {this.state.results.length > 0 ? <ResultButton /> : <p>No Results Found</p>}
             </div>
-
-
-
-
-
         )
     };
 };
 
-export default EventResultsModal;
+export default modal(EventResultsModal);
