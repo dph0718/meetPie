@@ -5,7 +5,7 @@ const maps = require('./maps/maps')
 
 var usersRouter = require('./usersRoutes');
 var eventsRouter = require('./eventsRoutes')
-var partiesRouter = require('./parties')
+var partiesRouter = require('./partiesRoutes')
 
 router.use("/maps", maps )
 router.use('/users', usersRouter);
