@@ -78,7 +78,8 @@ class FriendTableEvent extends React.Component {
                         <th>
                             Party Distance
                             </th>
-                        <th>Party Drive Time
+                        <th>
+                            Party Drive Time
                             </th>
                     </tr>
                 </thead>
