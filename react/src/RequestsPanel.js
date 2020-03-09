@@ -15,7 +15,7 @@ class RequestsPanel extends React.Component {
         event.preventDefault()
         const requestUrl = event.target.getAttribute("data-url")
         console.log(`Submitting event creation form`);
-        const data = "Request Data"
+        const data = {requestData: "This is the request Data!"}
 
         axios
             .post(`/${requestUrl}`, data)
