@@ -19,7 +19,9 @@ function modal(WrappedComponent, otherArgument) {
             let displayStyle = {
                 display: this.state.open ? "" : "none",
                 position: "fixed",
-                top: 0
+                top: 0,
+                backgroundColor: "black",
+                color: "white"
             }
 
             console.log(this.state.open)
