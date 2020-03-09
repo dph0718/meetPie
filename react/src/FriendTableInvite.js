@@ -1,5 +1,5 @@
-
 import React from "react"
+import modal from "./HOCModal"
 
 function Row(props) {
     return (
@@ -9,13 +9,9 @@ function Row(props) {
             <td>{props.friend.distanceToMe}</td>
             <td>{props.friend.totalMeetpiesShared}</td>
             <td> <button>Invite button</button></td>
-
         </tr>
     )
-
 }
-
-
 
 class FriendTableInvite extends React.Component {
     constructor(props) {
@@ -24,7 +20,6 @@ class FriendTableInvite extends React.Component {
             friends: []
         }
     }
-
 
     componentDidMount() {
         this.setState({
@@ -35,17 +30,13 @@ class FriendTableInvite extends React.Component {
         })
     }
 
-
     render() {
-
-
 
         let FriendRows = this.state.friends.map((friend) => {
             return (
                 <Row friend={friend} />
             )
         })
-
 
         return (
             <table>
@@ -77,4 +68,4 @@ class FriendTableInvite extends React.Component {
     }
 }
 
-export default FriendTableInvite;
+export default modal(FriendTableInvite);

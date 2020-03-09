@@ -10,7 +10,8 @@ function modal(WrappedComponent, otherArgument) {
             }
         }
 
-        toggleDisplay = () => {
+        toggleDisplay = (event) => {
+            event.preventDefault()
             this.setState({ open: !this.state.open })
         }
 
@@ -21,10 +22,12 @@ function modal(WrappedComponent, otherArgument) {
                 top: 0
             }
 
+            console.log(this.state.open)
             return (
                 <div className="modal" style={displayStyle}>
-                    <div className="modal-header"
-                        onClick={this.toggleDisplay}>✖</div>
+                    <div className="modal-header" style={{ display: 'flex', flexDirection: "column", width: "100%", justifyContent: 'flex-end', alignItems: "flex-end" }}>
+                        <button onClick={this.toggleDisplay} style={{ width: "2em" }}>✖</button>
+                    </div>
                     <p>This would be, like, the header.</p>
                     <WrappedComponent data={this.state.data} {...this.props} />
                 </div>
