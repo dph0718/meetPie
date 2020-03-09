@@ -3,6 +3,15 @@ var router = express.Router();
 var path = require('path');
 const maps = require('./maps/maps')
 
+var usersRouter = require('./usersRoutes');
+var eventsRouter = require('./eventsRoutes')
+var partiesRouter = require('./parties')
+
+router.use("/maps", maps )
+router.use('/users', usersRouter);
+router.use('/events', eventsRouter)
+router.use('/parties', partiesRouter)
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -12,6 +21,5 @@ router.get('/', function (req, res, next) {
   res.sendFile(path.join(__dirname, '../react/build', 'index.html'))
 });
 
-router.use("/maps", maps )
 
 module.exports = router;
