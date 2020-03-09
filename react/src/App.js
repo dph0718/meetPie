@@ -14,7 +14,7 @@ import FriendTableInvite from './FriendTableInvite'
 import FriendTableEvent from './FriendTableEvent'
 import EventResultsModal from './EventResultsModal'
 import EventPreview from './EventPreview.js'
-
+import RequestPanel from "./RequestsPanel"
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +29,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
+          <RequestPanel/>
           <div>
             <nav>
               <Link to="/">HomeHome</Link>

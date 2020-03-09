@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.post('/createEvent', (req, res) => {
+    console.dir(req.body)
     res.send("Response sent for Create Event")
 })
 
